@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    font-family:"Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+body{
+    min-height: 100vh;
+    background:url('fondo2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: rgb(58, 5, 55);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; ;
+    
+}
+.salto{
+    height: 60px; /* Esto controla la altura del salto de línea */
+}
+.salto2{
+    height: 100px; /* Esto controla la altura del salto de línea */
+}
+.salto3{
+    height: 30px; /* Esto controla la altura del salto de línea */
+}
+h1 {
+    color:wheat ;
+    text-align: center;
+    padding: 20px;
+    margin: 100px auto;  /* Centra el h1 en su contenedor */
+    width: fit-content;  /* Ajusta el ancho del h1 al tamaño del contenido */
+}
+h2 {
+    color:wheat ;
+    text-align: center;
+    padding: 20px;
+    margin: 0px auto;  /* Centra el h1 en su contenedor */
+    width: fit-content;  /* Ajusta el ancho del h1 al tamaño del contenido */
+}
+.centrada{
+    padding: 30px;
+    display: block;           /* Hace que la imagen sea un bloque */
+    margin: 60px auto;         /* Centra la imagen y agrega un margen en la parte superior e inferior */
+    width: 40%; 
+}
+.logo img{
+    height: 50px;  
+    margin-right: 10px;
+}
+.titulos h1{
+    height: 10px;  
+    margin-right: 0px;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 20px;
+    color: aliceblue;
+    font-weight: 500;
+    text-decoration:none; 
+    margin-left: 40px;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+.navbar a:hover::before{
+width: 100%;
+}
+
+
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+    .nav{
+        padding: 10px 0;
+    }
+}
+footer {
+    background-color: #9575e0;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Estilos del formulario */
+.contact-form {
+    margin: 200px auto;
+    padding: 20px;
+    background-color: rgb(234, 241, 241);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    text-align: center;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: rgb(72, 35, 82);
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    background-color: rgb(72, 35, 82);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: rgb(72, 35, 82);
+}
+/* Primera pagina */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+.product {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    
+}
+
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-info h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.price {
+    font-size: 1.1em;
+    color: #e67e22;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+
+
+/* Estilos de la barra de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 20px;
+    margin-left: 20px;
+    transition: all 0.3s ease;
+    justify-content: flex-end;
+
+}
+
+.search-input {
+    border: none;
+    padding: 10px;
+    width: 250px; /* Ancho inicial de la barra */
+    border-radius: 15px;
+    outline: none;
+    background-color: #fff;
+    color: #333;
+    font-size: 1em;
+    transition: width 0.4s ease; /* Efecto suave al cambiar el ancho */
+}
+
+/* Efecto al hacer hover sobre el campo de búsqueda */
+.search-input:hover {
+    width: 300px; /* Se expande al pasar el mouse */
+}
+
+.search-input:focus {
+    width: 350px; /* Se expande más al hacer foco */
+}
+
+/* Estilos del botón de búsqueda */
+.search-btn {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin-left: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Efecto hover en el botón de búsqueda */
+.search-btn:hover {
+    background-color: #2980b9;
+}
+
+.search-btn:focus {
+    outline: none;
+}
